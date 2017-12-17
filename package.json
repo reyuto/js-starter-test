@@ -4,11 +4,25 @@
   "description": "A starter kit for javascript projects with bundling, linting, githooks and many more",
   "main": "index.js",
   "scripts": {
-    "test": "webpack"
+    "build": "export NODE_ENV=build && webpack",
+    "test:fast": "export NODE_ENV=testing && jest",
+    "test": "npm run build && npm run test:fast"
   },
   "pre-commit": [
     "test"
   ],
+  "jest": {
+    "browser": true,
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reyuto/js-starter-test.git"
@@ -22,12 +36,17 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.13.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.5.0",
+    "jest": "^21.2.1",
     "pre-commit": "^1.2.2",
     "webpack": "^3.10.0"
   }
