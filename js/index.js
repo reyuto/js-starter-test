@@ -1,1 +1,6 @@
-console.log('This seems to be a good starting point'); // eslint-disable-line
+const FunWithStrings = () => {
+  this.reversy = str => str.reverse();
+  this.doubly = str => str + str;
+};
+
+export default FunWithStrings;

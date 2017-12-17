@@ -21,9 +21,6 @@ module.exports = {
         options: {
           presets: [
             ['env', {
-              targets: {
-                browsers: ['last 2 version', 'firefox >= 52', 'safari >= 9', 'ie >= 11'],
-              },
               modules: false,
             }],
           ],
