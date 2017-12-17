@@ -1,3 +1,5 @@
-export default function join(str1, str2) {
+function join(str1, str2) {
   return `${str1} ${str2}`;
 }
+
+module.exports = join;

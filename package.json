@@ -4,7 +4,7 @@
   "description": "A starter kit for javascript projects with bundling, linting, githooks and many more",
   "main": "index.js",
   "scripts": {
-    "test": "webpack"
+    "test": "webpack && jest"
   },
   "pre-commit": [
     "test"
@@ -28,6 +28,7 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "^2.8.0",
+    "jest": "^21.2.1",
     "pre-commit": "^1.2.2",
     "webpack": "^3.10.0"
   }
