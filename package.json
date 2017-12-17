@@ -4,7 +4,8 @@
   "description": "A starter kit for javascript projects with bundling, linting, githooks and many more",
   "main": "index.js",
   "scripts": {
-    "test": "webpack"
+    "test": "webpack && ava",
+    "test-watch": "ava --watch"
   },
   "pre-commit": [
     "test"
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/reyuto/js-starter-test#readme",
   "devDependencies": {
+    "ava": "^0.24.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
